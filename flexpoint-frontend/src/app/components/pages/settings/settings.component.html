@@ -1,0 +1,53 @@
+<div class="container mt-4">
+  <div class="col">
+    <div class="header p-1 d-flex justify-content-between">
+      <h1>Setting</h1>
+      <div class="searchArea d-none d-md-flex p-1">
+        <input type="search" id="searchBar" class="form-control" placeholder="Search here..."/>
+        <button class="btn">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5 box p-4 rounded-3">
+    <div class="row mt-4">
+      <div class="col-5 col-md-3 col-lg-2">
+        <label for="businessIconInput">Business Icon</label>
+      </div>
+      <div class="col">
+        <input id="businessIconInput" type="file" class="form-control" (change)="onFaviconFileSelected($event)">
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-5 col-md-3 col-lg-2">
+        <label for="businessNameInput01">Business Name (Part 1)</label>
+      </div>
+      <div class="col">
+        <input id="businessNameInput01" class="form-control p-1" placeholder="e.g., Flex" [(ngModel)]="businessName01">
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-5 col-md-3 col-lg-2">
+        <label for="businessNameInput02">Business Name (Part 2)</label>
+      </div>
+      <div class="col">
+        <input id="businessNameInput02" class="form-control p-1" placeholder="e.g., Point" [(ngModel)]="businessName02">
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col d-flex gap-3">
+        <label for="primaryColorInput">Primary Colour</label>
+        <input id="primaryColorInput" type="color" [(ngModel)]="primaryColor">
+      </div>
+      <div class="col d-flex gap-3">
+        <label for="secondaryColorInput">Secondary Colour</label>
+        <input id="secondaryColorInput" type="color" [(ngModel)]="secondaryColor">
+      </div>
+    </div>
+
+    <div class="row mt-5 d-flex justify-content-end">
+      <div class="col">
+        <button class="apply-Btn p-1" (click)="applySettings()">Apply</button>
+      </div>
+    </div>
+  </div>
+</div>

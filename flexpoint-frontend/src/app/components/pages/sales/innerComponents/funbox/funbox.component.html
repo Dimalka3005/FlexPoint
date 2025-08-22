@@ -1,0 +1,89 @@
+<div class="box p-3 rounded-3 h-100">
+  <div class="row">
+    <div class="col">
+      <select class="form-select" id="userSelector">
+        <option selected>Select Customer</option>
+        <option value="01">user01</option>
+        <option value="02">user02</option>
+        <option value="03">user03</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col">
+      <div class="row">
+        <div class="col-4">
+          <label class="fs-5 fw-bold">Sub Total</label>
+        </div>
+        <div class="col">
+          <input id="subTotal" class="form-control text-center" value="0.00" disabled>
+        </div>
+      </div>
+      <div class="mt-2 row">
+        <div class="col-4">
+          <label class="fs-5 fw-bold">Discount</label>
+        </div>
+        <div class="col">
+          <input class="form-control text-center" placeholder="0">
+        </div>
+      </div>
+      <div class="mt-2 row">
+        <div class="col-4">
+          <label class="fs-5 fw-bold">Tax</label>
+        </div>
+        <div class="col">
+          <input class="form-control text-center" placeholder="0">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <input id="total" class="form-control text-center p-xl-2 fs-4" value="0.00" disabled>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <div class="pmi container">
+        <div class="row gap-2">
+          <div class="col text-center">
+            <span class="mdi mdi-cash-multiple"></span>
+          </div>
+          <div class="col text-center">
+            <span class="mdi mdi-credit-card-multiple"></span>
+          </div>
+        </div>
+        <div class="mt-2 row gap-2">
+          <div class="col text-center">
+            <span class="mdi mdi-qrcode-scan"></span>
+          </div>
+          <div class="col text-center">
+            <span class="mdi mdi-cellphone"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col">
+      <div class="row">
+        <div class="col-4">
+          <label class="fs-5 fw-bold">Cash Price</label>
+        </div>
+        <div class="col">
+          <input class="form-control text-center" placeholder="0.00">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <input id="balance" class="form-control text-center" value="0.00" disabled>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <button class="btn w-100 fw-bold text-white p-xl-2 fs-5">Sale Process</button>
+    </div>
+  </div>
+</div>

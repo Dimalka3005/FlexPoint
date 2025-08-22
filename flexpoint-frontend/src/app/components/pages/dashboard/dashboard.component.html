@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div class="header d-flex justify-content-center align-items-center">
+    <div class="clock-container">
+      <app-clock></app-clock>
+    </div>
+  </div>
+
+  <div class="mt-5 row g-3">
+    <div class="col-md-3">
+      <app-summary-card
+        icon="mdi mdi-account-multiple-outline"
+        cardName="Total Users"
+        cardValue="256"
+      ></app-summary-card>
+    </div>
+    <div class="col-md-3">
+      <app-summary-card
+        icon="mdi mdi-cube-outline"
+        cardName="All Products"
+        cardValue="52"
+      ></app-summary-card>
+    </div>
+    <div class="col-md-3">
+      <app-summary-card
+        icon="mdi mdi-cart-outline"
+        cardName="Today Sales"
+        cardValue="250,000.00"
+      ></app-summary-card>
+    </div>
+    <div class="col-md-3">
+      <app-summary-card
+        icon="mdi mdi-file-chart-outline"
+        cardName="Pending Reports"
+        cardValue="10"
+      ></app-summary-card>
+    </div>
+  </div>
+</div>

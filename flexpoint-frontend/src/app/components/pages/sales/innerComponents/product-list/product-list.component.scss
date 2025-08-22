@@ -1,0 +1,39 @@
+.box{
+  border: 2px solid var(--primary-color);
+  .list{
+    height: 420px;
+  }
+}
+
+.table{
+  tr{
+    border-bottom: 1px sold var(--primary-color);
+    &:hover{
+      td{
+        background-color: var(--primary-color-50);
+      }
+    }
+  }
+}
+
+//DarkTheme
+:host-context(.dark-theme){
+  .box{
+    border-color: var(--secondary-color);
+  }
+  .table{
+    tr{
+      //background-color: transparent;
+      border-color: var(--secondary-color);
+      td{
+        background-color: transparent;
+        color: white;
+      }
+      &:hover{
+        td{
+          background-color: var(--secondary-color-50) !important;
+        }
+      }
+    }
+  }
+}

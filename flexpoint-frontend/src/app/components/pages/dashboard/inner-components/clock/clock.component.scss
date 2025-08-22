@@ -1,0 +1,27 @@
+.clock span{
+  font-size: 7rem;
+  color: black;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+@media (max-width: 992px) {
+  .clock span{
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 556px) {
+  .clock span{
+    font-size: 3rem;
+  }
+}
+
+
+//DarkTheme
+:host-context(.dark-theme) {
+  .clock span{
+    color: white;
+    text-shadow: 0 0 10px var(--secondary-color);
+  }
+
+}

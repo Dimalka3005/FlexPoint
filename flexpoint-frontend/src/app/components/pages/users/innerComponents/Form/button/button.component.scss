@@ -1,0 +1,22 @@
+.btnOutlineSec{
+  background-color: transparent !important;
+  border-width: 2px !important;
+  border-color: var(--secondary-color) !important;
+  transition: all 0.4s linear;
+
+  &:hover{
+    background-color: var(--secondary-color) !important;
+    border: none;
+  }
+}
+
+:host-context(.dark-theme){
+  .btnOutlineSec{
+    background-color: var(--primary-color) !important;
+    border: none;
+
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}

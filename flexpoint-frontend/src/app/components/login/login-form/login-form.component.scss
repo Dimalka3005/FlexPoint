@@ -1,0 +1,24 @@
+form{
+  .logo{
+    color: var(--primary-color);
+    span{
+      color: var(--secondary-color);
+    }
+    cursor: default;
+  }
+
+  input,
+  button{
+    font-size: medium;
+  }
+
+  .fpText:hover{
+    color: var(--secondary-color);
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+  }
+}

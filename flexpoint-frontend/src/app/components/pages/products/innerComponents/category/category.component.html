@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="catBox">
+        <div class="header d-flex justify-content-between">
+            <h4>Add New Category</h4>
+            <i class="mdi mdi-menu-down"></i>
+        </div>
+        <hr class="seperater">
+        <div class="catBody">
+            <div class="row" id="form-items">
+                <div class="txtField col-3">
+                    <input type="text" id="catId" placeholder="Category Id"/>
+                </div>
+                <div class="txtField col">
+                    <input type="text" id="catName" placeholder="Category Name"/>
+                </div>
+                <div class="funBtn col-2">
+                    <button id="funBtn">
+                        <i class="mdi mdi-check-underline-circle me-lg-2"></i>
+                        <span>save</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-5 p-3" id="catList">
+                <table class="table table">
+                    <thead>
+                      <tr>
+                        <th class="col-3">Category ID</th>
+                        <th class="col-4 col-lg-6">Category Name</th>
+                        <th class="col-5 col-lg-3">Option</th>
+                      </tr>
+                    </thead>
+                    <tbody id="catData">
+                      <tr>
+                        <td>Cat001</td>
+                        <td>Home-Item</td>
+                        <td>
+                          <button class="btn bg-danger me-2">Delete</button>
+                          <button class="btn bg-warning">Edit</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Cat002</td>
+                        <td>Vehicle-Part</td>
+                        <td>
+                          <button class="btn bg-danger me-2">Delete</button>
+                          <button class="btn bg-warning">Edit</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Cat003</td>
+                        <td>Construction-Item</td>
+                        <td>
+                          <button class="btn bg-danger me-2">Delete</button>
+                          <button class="btn bg-warning">Edit</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

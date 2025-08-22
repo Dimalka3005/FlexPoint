@@ -1,0 +1,60 @@
+.card-summary{
+  height: inherit;
+  //background-color: var(--primary-color);
+  background-color: transparent;
+  border: 3px solid var(--primary-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s linear;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateX(10px);
+    background-color: var(--primary-color);
+    color: white !important;
+  }
+}
+
+
+
+//Responsive
+@media screen and (min-width: 768px) {
+  .headerBox {
+    margin-bottom: 25;
+    height: 350px;
+  }
+
+  .card-body {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-summary:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .clock{
+    font-size: 3rem !important;
+    display: inherit;
+  }
+  span{
+    min-width: 50px !important;
+  }
+}
+
+
+//DarkTheme
+:host-context(.dark-theme) {
+  .card-summary{
+    //background-color: var(--secondary-color);
+    background-color: transparent;
+    color: white;
+    border-color: var(--secondary-color);
+    box-shadow: 0 2px 8px var(--secondary-color);
+  }
+  .card-summary:hover {
+    background-color: var(--secondary-color);
+  }
+}

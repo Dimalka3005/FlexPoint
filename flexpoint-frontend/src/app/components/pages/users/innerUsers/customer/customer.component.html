@@ -1,0 +1,68 @@
+<div class="container">
+
+  <div class="header mt-3 mb-5 d-flex justify-content-between align-items-center">
+    <i class="mdi mdi-arrow-left-bold fs-2" routerLink="/users"></i>
+    <h1>Manage Customers.</h1>
+  </div>
+
+  <div class="form">
+    <div class="row">
+      <div class="col">
+        <app-text-field
+          labelName="First Name"
+          inputType="text"
+          inputId="fName"
+        ></app-text-field>
+      </div>
+      <div class="col">
+        <app-text-field
+          labelName="Last Name"
+          inputType="text"
+          inputId="lName"
+        ></app-text-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <app-text-area
+          labelName="Personal Address"
+          ta_id="adrsId"
+        ></app-text-area>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <app-text-field
+          labelName="Email"
+          inputType="email"
+          inputId="email"
+        ></app-text-field>
+      </div>
+      <div class="col">
+        <app-text-field
+          labelName="Mobile Number"
+          inputType="text"
+          inputId="mobNo"
+        ></app-text-field>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mt-5">
+    <table class="table table-responsive">
+      <thead>
+      <tr class="text-center">
+        <th class="col-1">#ID</th>
+        <th class="col-2">Name</th>
+        <th class="col-2">Address</th>
+        <th class="col-2">Email</th>
+        <th class="col-1">Telephone</th>
+        <th class="col-1">Status</th>
+      </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+</div>

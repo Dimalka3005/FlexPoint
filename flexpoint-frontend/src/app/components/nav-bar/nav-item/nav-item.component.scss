@@ -1,0 +1,55 @@
+.active {
+  i,span{
+    font-weight: bold;
+    color: var(--primary-color) !important;
+    text-shadow: 0 0 10px var(--secondary-color);
+  }
+}
+
+.nav-link {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &:hover {
+    i,span{
+      cursor: pointer;
+      color: var(--primary-color) !important;
+      text-shadow: 0px 0px 10px var(--secondary-color);
+    }
+  }
+}
+
+
+:host-context(.dark-theme) {
+  .nav-link {
+    i,span{
+      color: #9b9b9b !important; /* Dark theme icon color */
+    }
+    &:hover {
+      i,span{
+        color: var(--secondary-color) !important;
+        text-shadow: 0 0 10px var(--primary-color);
+      }
+    }
+  }
+
+  .active {
+    i,span{
+      color: var(--secondary-color) !important;
+      text-shadow: 0 0 10px var(--primary-color);
+    }
+  }
+}
+
+/* Responsive adjustments for desktop/larger screens (if specific to nav-item) */
+@media (min-width: 992px) {
+  .nav-link span {
+    display: none; /* Hide text for icon-only navigation on large screens */
+  }
+
+  .nav-link i {
+    font-size: 1.8rem !important; /* Increase icon size on large screens */
+  }
+}

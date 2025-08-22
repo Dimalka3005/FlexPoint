@@ -1,0 +1,38 @@
+.navbar {
+  background-color: rgba(247, 252, 251, 0.96) !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+    span{
+      color: var(--secondary-color);
+    }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .navbar {
+    background-color: rgba(249, 255, 254, 0.981) !important;
+  }
+
+  :host-context(.dark-theme) .navbar {
+    background-color: rgba(233, 255, 252, 0.159) !important;
+  }
+}
+
+:host-context(.dark-theme) {
+  .navbar {
+    background-color: rgba(73, 79, 78, 0.977) !important;
+  }
+
+  .navbar-brand {
+    color: #a7a7a7 !important;
+  }
+}

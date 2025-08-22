@@ -1,0 +1,32 @@
+*{
+  transition: all 0.3s ease-in;
+}
+.box{
+  width: 100%;
+  height: 500px;
+  padding: 30px;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.catCh,
+.proCh{
+  max-height: 100%;
+  border: 0.5px solid var(--primary-color);
+}
+
+//Responsive
+@media (max-width: 991px) {
+  .box{
+    height: 600px;
+    flex-direction: column;
+  }
+
+}
+
+//DarkTheme
+:host-context(.dark-theme){
+  *{
+    border-color: var(--secondary-color);
+  }
+}

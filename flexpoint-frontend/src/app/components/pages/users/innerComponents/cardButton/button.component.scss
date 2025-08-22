@@ -1,0 +1,31 @@
+i{
+  font-size: 6rem;
+}
+
+i,h4{
+  color: white;
+}
+
+button{
+  font-weight: bold;
+  background-color: papayawhip;
+  color: black;
+  padding: 5px 25px;
+  transition: all 0.5s linear;
+  &:hover{
+    background-color: navajowhite;
+  }
+}
+
+
+//darkTheme
+:host-context(.dark-theme) {
+  i,h4{
+    color: black;
+  }
+  button{
+    &:hover {
+      background-color: navajowhite;
+    }
+  }
+}

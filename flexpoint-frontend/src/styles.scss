@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #1B3E54;
+  --secondary-color: #61B9AD;
+  --primary-color-50: rgba(27, 62, 84, 0.3);
+  --secondary-color-50: rgba(97, 185, 173, 0.3);
+}
+
+/* Light theme (default) */
+body {
+  background-color: #ffffff;
+}
+
+/* Dark theme */
+body.dark-theme {
+  background-color: #2a2a2a;
+}

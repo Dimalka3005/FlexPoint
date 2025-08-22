@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar px-4 fixed-top">
+  <a class="navbar-brand fs-3" id="navTextIcon" routerLink="">
+    Flex<span>Point</span>
+  </a>
+  <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <i class="mdi mdi-menu fs-2"></i>
+  </button>
+
+  <div class="collapse navbar-collapse gap-5" id="navMenu">
+    <ul class="navbar-nav ms-auto me-5 gap-lg-5">
+      <app-nav-item iconClass="mdi mdi-view-dashboard" text="Dashboard" routerLink="/dashboard"></app-nav-item>
+      <app-nav-item iconClass="mdi mdi-account-group" text="Users" routerLink="/users"></app-nav-item>
+      <app-nav-item iconClass="mdi mdi-cube" text="Products" routerLink="/products"></app-nav-item>
+      <app-nav-item iconClass="mdi mdi-cart" text="Sells" routerLink="/sales"></app-nav-item>
+      <app-nav-item iconClass="mdi mdi-file-chart" text="Reports" routerLink="/reports"></app-nav-item>
+    </ul>
+    <hr>
+    <div>
+      <ul class="navbar-nav gap-0 gap-lg-4">
+        <app-nav-item iconClass="mdi mdi-cog" text="Settings" routerLink="/settings"></app-nav-item>
+        <li>
+          <a class="nav-link" id="themeToggle" (click)="toggleTheme()">
+            <i class="mdi fs-4 text-black"
+               [class.mdi-white-balance-sunny]="isDarkTheme"
+               [class.mdi-weather-night]="!isDarkTheme"></i>
+            <span> Theme</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
