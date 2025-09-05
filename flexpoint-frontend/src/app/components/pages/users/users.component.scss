@@ -44,14 +44,12 @@
     thead{
       border-bottom: 3px solid var(--primary-color);
     }
-    tbody{
+    .tbody{
       tr{
         &:hover{
           td{
-            background-color: var(--secondary-color) !important;
+            background-color: var(--light-primary-color) !important;
           }
-          cursor: pointer;
-
         }
       }
     }

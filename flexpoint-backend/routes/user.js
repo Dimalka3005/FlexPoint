@@ -148,8 +148,29 @@ router.post('/forgot-password', (req, res) => {
 
 // GET ALL USERS
 router.get('/get-all-users',auth.authenticateToken, checkRole.checkRole, (req, res) => {
-    const query = "SELECT id,name,email,contact,status FROM user WHERE role = 'user'";
+    const query = "SELECT id,name,role,status,user_category FROM user";
     connection.query(query, (err, result) => {
+        if (!err) {
+            return res.status(200).json({
+                success: true,
+                message: 'Users fetched successfully',
+                data: result
+            });
+        }
+        else {
+            return res.status(500).json({
+                success: false,
+                message: 'Something went wrong. Please try again'
+            });
+        }
+    })
+})
+
+// Get user from user_category
+router.get('/get-users-by-category',auth.authenticateToken, checkRole.checkRole, (req, res) => {
+    const category = req.query.category;
+    const query = "SELECT id,name,role,status,user_category FROM user WHERE user_category = ?";
+    connection.query(query, [category], (err, result) => {
         if (!err) {
             return res.status(200).json({
                 success: true,

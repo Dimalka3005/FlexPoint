@@ -9,7 +9,6 @@ const categoryRouter = require("./routes/category");
 const productRouter = require("./routes/product");
 const ordersRouter = require("./routes/orders");
 const dashboardRouter = require("./routes/dashboard");
-const testRouter = require("./routes/test");
 
 const app = express();
 
@@ -29,5 +28,4 @@ app.use("/category", categoryRouter);
 app.use("/product", productRouter);
 app.use("/orders", ordersRouter);
 app.use("/dashboard", dashboardRouter);
-app.use("/api", testRouter);
 module.exports = app;

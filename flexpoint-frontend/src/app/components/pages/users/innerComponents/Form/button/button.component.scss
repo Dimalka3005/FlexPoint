@@ -1,22 +1,22 @@
 .btnOutlineSec{
+  width: 25%;
+  padding: 10px 15px;
+  font-weight: 600;
   background-color: transparent !important;
   border-width: 2px !important;
-  border-color: var(--secondary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color);
   transition: all 0.4s linear;
 
   &:hover{
-    background-color: var(--secondary-color) !important;
-    border: none;
+    background-color: var(--primary-color) !important;
+    color: white;
   }
 }
 
 :host-context(.dark-theme){
   .btnOutlineSec{
-    background-color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
     border: none;
-
-    &:hover{
-      transform: scale(1.2);
-    }
   }
 }

@@ -6,60 +6,45 @@
   </div>
 
   <div class="form">
-  <div class="row">
-    <div class="col">
-      <app-text-field
-        labelName="First Name"
-        inputType="text"
-        inputId="fName"
-      ></app-text-field>
+    <div class="row">
+      <div class="col">
+        <app-text-field labelName="First Name" inputType="text" inputId="fName"></app-text-field>
+      </div>
+      <div class="col">
+        <app-text-field labelName="Last Name" inputType="text" inputId="lName"></app-text-field>
+      </div>
     </div>
-    <div class="col">
-      <app-text-field
-        labelName="Last Name"
-        inputType="text"
-        inputId="lName"
-      ></app-text-field>
+    <div class="row">
+      <div class="col">
+        <app-text-area labelName="Personal Address" ta_id="adrsId"></app-text-area>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <app-text-area
-        labelName="Personal Address"
-        ta_id="adrsId"
-      ></app-text-area>
+    <div class="row">
+      <div class="col">
+        <app-text-field labelName="Email" inputType="email" inputId="email"></app-text-field>
+      </div>
+      <div class="col">
+        <app-password-field labelName="Account Password"></app-password-field>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <app-text-field
-        labelName="Email"
-        inputType="email"
-        inputId="email"
-      ></app-text-field>
-    </div>
-    <div class="col">
-      <app-password-field
-        labelName="Account Password"
-      ></app-password-field>
-    </div>
-  </div>
   </div>
 
 
   <div class="mt-5">
     <table class="table table-responsive">
       <thead>
-      <tr class="text-center">
-        <th class="col-1">#ID</th>
-        <th class="col-2">Name</th>
-        <th class="col-2">Address</th>
-        <th class="col-2">Email</th>
-        <th class="col-1">Password</th>
-        <th class="col-1">Status</th>
-      </tr>
+        <tr class="text-center">
+          <th class="col-1">#ID</th>
+          <th class="col-2">Name</th>
+          <th class="col-2">Email</th>
+          <th class="col-2">Contact</th>
+          <th class="col-1">Role</th>
+          <th class="col-2"></th>
+        </tr>
       </thead>
-      <tbody id="tbody"></tbody>
+      <tbody id="tbody" class="text-center">
+        
+      </tbody>
     </table>
   </div>
 

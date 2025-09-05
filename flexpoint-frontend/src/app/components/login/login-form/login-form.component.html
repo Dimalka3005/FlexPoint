@@ -1,24 +1,34 @@
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="d-flex align-items-center mb-3 pb-1">
       <span class="logo h1 fw-bold mb-0">
         Flex <span>Point</span>
       </span>
     </div>
 
-    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in to your account</h5>
 
     <div class="form-outline mb-4">
       <label class="form-label" for="formEmail">Email address</label>
-      <input type="email" id="formEmail" class="form-control form-control-lg" />
+      <input type="email" id="formEmail" formControlName="email" class="form-control form-control-lg" />
+      <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="text-danger">
+        <small *ngIf="loginForm.get('email')?.hasError('required')">Email is required</small>
+        <small *ngIf="loginForm.get('email')?.hasError('email')">Please enter a valid email</small>
+      </div>
     </div>
 
     <div class="form-outline mb-4">
       <label class="form-label" for="formPassword">Password</label>
-      <input type="password" id="formPassword" class="form-control form-control-lg" />
+      <input type="password" id="formPassword" formControlName="password" class="form-control form-control-lg" />
+      <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="text-danger">
+        <small *ngIf="loginForm.get('password')?.hasError('required')">Password is required</small>
+      </div>
     </div>
 
     <div class="pt-1 mb-4">
-      <button class="btn btn-dark btn-lg btn-block fw-bold w-100" type="button">Login</button>
+      <button class="btn btn-dark btn-lg btn-block fw-bold w-100" type="submit" [disabled]="isLoading">
+        <span *ngIf="!isLoading">Login</span>
+        <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      </button>
     </div>
 
 
